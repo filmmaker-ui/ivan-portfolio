@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Alvaro | Film Editor &amp; Sound Designer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* COLOR PALETTE */
+        --navy: #0a0f29;
+        --navy-light: #161d40;
+        --cyan: #5bd1d7;
+        --gold: #cdaf6f;
+        --text-light: #f7f8fc;
+        --text-muted: #c4c6d4;
+
+        /* FONTS */
+        --heading: "Poppins", sans-serif;
+        --body: "Inter", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--body);
+        background: var(--navy);
+        color: var(--text-light);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      a {
+        color: var(--cyan);
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--heading);
+        font-weight: 600;
+      }
+
+      /* LAYOUT */
+      header {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--navy-light);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      nav a:hover {
+        color: var(--gold);
+      }
+
+      section {
+        padding: 4rem 2rem;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      /* Hero */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        min-height: 80vh;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 6vw, 4rem);
+      }
+
+      .reel {
+        width: 100%;
+        max-width: 650px;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      }
+
+      /* Projects */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-card {
+        background: var(--navy-light);
+        border-radius: 0.75rem;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .project-card img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+
+      .project-card .content {
+        padding: 1rem;
+      }
+
+      /* Contact */
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      input,
+      textarea {
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--navy-light);
+        font-family: var(--body);
+        font-size: 1rem;
+        background: #fff;
+        color: #000;
+      }
+
+      button {
+        cursor: pointer;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 2rem;
+        font-family: var(--heading);
+        font-size: 1rem;
+        background: var(--cyan);
+        color: var(--navy);
+        transition: opacity 0.3s ease;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+    </style>
+
+    <!-- Google Analytics 4 (replace G-XXXXXXX with your Measurement ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXX");
+    </script>
+  </head>
+
+  <body>
+    <!-- ===== Header / Nav ===== -->
+    <header>
+      <h3>Ivan Alvaro</h3>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <h1>Film Editor &amp; Sound Designer</h1>
+      <video
+        class="reel"
+        src="assets/reel.mp4"
+        controls
+        poster="assets/reel-thumb.jpg"
+        id="reel-video"
+      ></video>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m Ivan Alvaro, a Los Angeles–based film editor and sound designer with a
+        passion for crafting immersive stories. My work blends rhythmic pacing
+        with meticulous soundscapes to draw audiences in.
+      </p>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="work">
+      <h2>Selected Work</h2>
+      <div class="projects-grid">
+        <!-- Project card example -->
+        <article class="project-card">
+          <img src="assets/project1.jpg" alt="Project title" />
+          <div class="content">
+            <h3>Project Title</h3>
+            <p>Short description of the edit—genre, role, year.</p>
+            <a href="https://vimeo.com/yourproject" target="_blank" rel="noopener"
+              >Watch →</a
+            >
+          </div>
+        </article>
+        <!-- Duplicate & edit for more projects -->
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <h2>Let’s Collaborate</h2>
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/your-id" /* replace with your Formspree ID */
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          rows="6"
+          placeholder="Tell me about your project…"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      © 2025 Ivan Alvaro. All rights reserved.
+    </footer>
+
+    <!-- ===== Custom Analytics Events ===== -->
+    <script>
+      // Track video play events in GA4
+      const reel = document.getElementById("reel-video");
+      reel.addEventListener("play", () => {
+        gtag("event", "video_play", {
+          event_category: "video",
+          event_label: "showreel",
+        });
+      });
+
+      // Track outbound link clicks
+      document.querySelectorAll("a[target='_blank']").forEach((link) => {
+        link.addEventListener("click", () => {
+          gtag("event", "outbound_click", {
+            event_category: "engagement",
+            event_label: link.href,
+          });
+        });
+      });
+
+      // Track contact form submissions
+      const contactForm = document.getElementById("contact-form");
+      contactForm.addEventListener("submit", () => {
+        gtag("event", "contact_submit", {
+          event_category: "contact",
+        });
+      });
+    </script>
+  </body>
+</html>
